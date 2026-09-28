@@ -1,0 +1,66 @@
+[
+ {
+  "id": "ej-01",
+  "fuente": "linkedin",
+  "titulo": "Junior AI Operations Specialist",
+  "empresa": "Startup tecnológica",
+  "ubicacion": "Madrid (100 % presencial)",
+  "url": "",
+  "descripcion": "Rol junior 'builder-first' en un equipo de IA que reporta a dirección. Identificar cuellos de botella y resolverlos combinando IA con herramientas no-code/low-code; desplegar agentes con Claude, OpenAI y Codex; consultoría interna; pasar de idea a prototipo en días. Requisitos: experiencia práctica con Claude/ChatGPT/APIs de OpenAI y prompt engineering; nociones de Zapier, Make o Retool. Valoran lo que sabes construir por encima de títulos. Contrato inicial de 6 meses con intención de indefinido."
+ },
+ {
+  "id": "ej-02",
+  "fuente": "linkedin",
+  "titulo": "Automation & Analytics Specialist",
+  "empresa": "Centro de servicios de un grupo automovilístico",
+  "ubicacion": "San Sebastián de los Reyes (60 % teletrabajo)",
+  "url": "",
+  "descripcion": "Identificar e implantar casos de uso de automatización e IA en distintas áreas de negocio con Power Platform, n8n y Celonis; proyectos de Microsoft Fabric, Power BI y Qlik; consultor interno de automatización, IA y BI; stakeholders internacionales. Requisitos: titulación en informática, datos, ingeniería o similar; 3+ años en analítica, BI, automatización o IA; inglés y español fluidos."
+ },
+ {
+  "id": "ej-03",
+  "fuente": "linkedin",
+  "titulo": "Junior Process Automation Developer",
+  "empresa": "Consultora de sostenibilidad",
+  "ubicacion": "Madrid",
+  "url": "",
+  "descripcion": "Departamento de digitalización de una consultora de sostenibilidad. Desarrollar y mantener agentes de IA (Claude, Copilot) y flujos automatizados; construir pequeñas apps internas con Claude Code; despliegue y mantenimiento. Requisitos: ingeniería informática o equivalente; 1-2 años con Python o JavaScript en proyectos reales; herramientas low-code; LLMs (prompting, agentes, function calling); APIs REST."
+ },
+ {
+  "id": "ej-04",
+  "fuente": "linkedin",
+  "titulo": "AI Tech Product Specialist",
+  "empresa": "Aseguradora internacional",
+  "ubicacion": "Madrid",
+  "url": "",
+  "descripcion": "Desarrollo y configuración de chatbots, copilotos y flujos de automatización para Italia, España y Portugal; prototipos y pruebas de concepto; seguimiento de KPIs. Requisitos: grado en informática, ingeniería o datos; 3 años en desarrollo de software, datos, automatización o IA; Python y Pandas; cloud Azure/AWS; valorable Power Automate y Copilot Studio; inglés B2."
+ },
+ {
+  "id": "ej-05",
+  "fuente": "linkedin",
+  "titulo": "Microsoft AI / Copilot Specialist",
+  "empresa": "Consultora IT",
+  "ubicacion": "Madrid (híbrido 60/40)",
+  "url": "",
+  "salario": "40.000–45.000 €",
+  "descripcion": "Diseñar y mantener agentes con Microsoft 365 Copilot y Copilot Studio; referente técnico; gobierno, seguridad y licenciamiento; soporte y formación a usuarios de negocio. Requisitos: experiencia sólida en Copilot Studio, Power Apps, Power Automate y Dataverse; prompt engineering; inglés B2."
+ },
+ {
+  "id": "ej-06",
+  "fuente": "linkedin",
+  "titulo": "Consultor/a de Automatización de Procesos e IA",
+  "empresa": "Big Four",
+  "ubicacion": "Madrid",
+  "url": "",
+  "descripcion": "Solo para empleados de la propia empresa (movilidad interna). Análisis AS-IS/TO-BE, process mining, RPA con UiPath o Power Automate, casos de uso de IA en procesos. Requisitos: 4+ años en transformación digital o RPA, preferiblemente sector público; inglés fluido."
+ },
+ {
+  "id": "ej-07",
+  "fuente": "manual",
+  "titulo": "Analista de Riesgos de Crédito",
+  "empresa": "Entidad financiera",
+  "ubicacion": "Madrid",
+  "descripcion": "Análisis de solicitudes de financiación, estados financieros y CIRBE; participación en comités de riesgo.",
+  "url": ""
+ }
+]

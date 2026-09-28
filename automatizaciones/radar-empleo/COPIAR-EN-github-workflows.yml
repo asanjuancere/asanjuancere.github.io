@@ -1,0 +1,40 @@
+# Radar de empleo: se ejecuta solo cada mañana en los servidores de GitHub (gratis).
+name: Radar de empleo
+
+on:
+  schedule:
+    - cron: "15 6 * * 1-5"   # lunes a viernes, 06:15 UTC (08:15 en Madrid en verano)
+  workflow_dispatch: {}       # botón "Run workflow" para lanzarlo a mano
+
+permissions:
+  contents: write             # para guardar vistos.json y metricas.csv
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: automatizaciones/radar-empleo
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt pytest
+      - name: Pruebas
+        run: python -m pytest -q tests
+      - name: Ejecutar radar
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_USUARIO: ${{ secrets.GMAIL_USUARIO }}
+          GMAIL_CLAVE_APP: ${{ secrets.GMAIL_CLAVE_APP }}
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+        run: python main.py
+      - name: Guardar estado y métricas
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          git add datos/
+          git diff --cached --quiet || git commit -m "Radar: métricas $(date +%F)"
+          git push
