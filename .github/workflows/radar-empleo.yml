@@ -30,7 +30,8 @@ jobs:
           GMAIL_CLAVE_APP: ${{ secrets.GMAIL_CLAVE_APP }}
           ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
-        run: python main.py
+        run: |
+             if [ -z "$ANTHROPIC_API_KEY" ]; then python main.py --demo; else python main.py; fi
       - name: Guardar estado y métricas
         run: |
           git config user.name "radar-bot"
