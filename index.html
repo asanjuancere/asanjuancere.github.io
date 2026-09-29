@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Álvaro San Juan</title>
-<meta name="description" content="Analista financiero que construye herramientas con IA para que los equipos pierdan menos tiempo en tareas repetitivas.">
+<meta name="description" content="Analista de crédito que construye su camino hacia la IA: herramientas y automatizaciones para hacer mejor el trabajo de los equipos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -67,10 +67,13 @@ h3{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.2;lette
 .progress li.ok{color:var(--ink)}
 .progress li.ok::before{background:var(--accent);border-color:var(--accent)}
 
-.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 40px}
 @media (max-width:720px){.principles{grid-template-columns:1fr;gap:26px}}
 .principles h3{font-size:21px}
 .principles p{margin:0;color:var(--muted);font-size:15px}
+.bul{margin:0 0 12px;padding:0;list-style:none;color:var(--muted);max-width:38em;font-size:15px}
+.bul li{position:relative;padding-left:18px;margin-bottom:7px}
+.bul li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:1px;background:var(--muted)}
 
 .edu{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:10px}
 @media (max-width:720px){.edu{grid-template-columns:1fr;gap:26px}}
@@ -103,7 +106,7 @@ footer a{border:0}
   <header class="hero" id="top">
     <p class="eyebrow" data-en="Madrid · Finance &amp; applied AI">Madrid · Finanzas e IA aplicada</p>
     <h1 data-en="Learn, test and <em>improve</em>.">Aprender, probar y <em>mejorar</em>.</h1>
-    <p class="lead" data-en="I'm a financial analyst who builds AI tools so teams spend less time on repetitive tasks and more on what matters. I build, measure the result and explain each decision.">Soy analista financiero y construyo herramientas con IA para que los equipos dediquen menos tiempo a lo repetitivo y más a lo importante. Construyo, mido el resultado y explico cada decisión.</p>
+    <p class="lead" data-en="I'm a credit analyst focused on artificial intelligence: building tools, automating processes, AI agents, document analysis, assistants for teams and more.">Soy analista de crédito, enfocado en la inteligencia artificial: creación de herramientas, automatización de procesos, agentes de IA, análisis de documentos, asistentes para equipos y más.</p>
     <div class="cta">
       <a href="#proyectos" data-en="See projects">Ver proyectos</a>
       <a class="soft" download href="cv/CV_Alvaro_San_Juan_ES.pdf" data-href-es="cv/CV_Alvaro_San_Juan_ES.pdf" data-href-en="cv/CV_Alvaro_San_Juan_EN.pdf" data-en="Download CV">Descargar CV</a>
@@ -132,20 +135,6 @@ footer a{border:0}
     </article>
 
     <article class="row">
-      <div class="meta"><span data-en="Working demo">Demo funcional</span></div>
-      <div>
-        <h3 data-en="Invoice extractor">Extractor de facturas</h3>
-        <p data-en="Turns invoices (PDF or photo) into a spreadsheet ready for accounting. It checks tax IDs, that the amounts add up, and flags duplicates.">Convierte facturas (PDF o foto) en una hoja lista para contabilidad. Comprueba los NIF/CIF, que los importes cuadren y avisa de duplicados.</p>
-        <p class="small" data-en="The example button works without a key. With your own Anthropic key it reads your invoices.">El botón de ejemplo funciona sin clave. Con tu propia clave de Anthropic lee tus facturas.</p>
-        <p class="tags">HTML · JavaScript · Claude API</p>
-        <div class="links">
-          <a href="herramientas/extractor-facturas/" data-en="Open demo">Abrir demo</a>
-          <a href="https://github.com/asanjuancere/asanjuancere.github.io/tree/main/herramientas/extractor-facturas" data-en="Code">Código</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="row">
       <div class="meta"><span data-en="Real case">Caso real</span><span class="st" data-en="Internal use">Uso interno</span></div>
       <div>
         <h3 data-en="Unpaid-debt annex generator">Generador de anexos de impagados</h3>
@@ -158,9 +147,12 @@ footer a{border:0}
   <section id="metodo">
     <p class="label" data-en="How I work">Cómo trabajo</p>
     <div class="principles">
-      <div><h3 data-en="Process first">Primero el proceso</h3><p data-en="I look at how the team works and where time is lost before choosing what to automate.">Miro cómo trabaja el equipo y dónde se pierde tiempo antes de decidir qué automatizar.</p></div>
-      <div><h3 data-en="Measure, don't assume">Medir, no suponer</h3><p data-en="I compare what the AI does with what a person would do, and I share the failures too.">Comparo lo que hace la IA con lo que haría una persona, y cuento también los fallos.</p></div>
-      <div><h3 data-en="Explain the decisions">Explicar las decisiones</h3><p data-en="Each project says why it was built that way, what went wrong and how I fixed it.">Cada proyecto cuenta por qué se hizo así, qué falló y cómo lo corregí.</p></div>
+      <div><h3 data-en="I start with the people">Empiezo por las personas</h3><p data-en="Before touching anything I talk to the people who do the work every day. Nobody knows better where time is lost.">Antes de tocar nada hablo con quien hace el trabajo cada día. Nadie sabe mejor dónde se pierde el tiempo.</p></div>
+      <div><h3 data-en="Transparency">Transparencia</h3><p data-en="I explain what the tool does, with which data and where it can fail. No black boxes.">Cuento qué hace la herramienta, con qué datos y dónde puede fallar. Sin cajas negras.</p></div>
+      <div><h3 data-en="AI suggests, people decide">La IA propone, la persona decide</h3><p data-en="I automate the repetitive part and leave judgement and review in the team's hands.">Automatizo lo repetitivo y dejo el criterio y la revisión en manos del equipo.</p></div>
+      <div><h3 data-en="Measure and improve">Medir y mejorar</h3><p data-en="I compare the tool with real work and report both the hits and the misses.">Comparo la herramienta con el trabajo real y cuento tanto los aciertos como los fallos.</p></div>
+      <div><h3 data-en="Change, together">Cambio acompañado</h3><p data-en="A tool nobody uses is worthless. I listen, train and adjust until the team makes it their own.">Una herramienta que nadie usa no sirve. Escucho, formo y ajusto hasta que el equipo la hace suya.</p></div>
+      <div><h3 data-en="Care with data">Cuidar los datos</h3><p data-en="I use only what's needed, anonymise when I can and never expose client information.">Uso lo mínimo necesario, anonimizo cuando puedo y no expongo nada de clientes.</p></div>
     </div>
   </section>
 
@@ -170,33 +162,33 @@ footer a{border:0}
     <div class="row">
       <div class="meta" data-en="Nov 2022 – present">Nov 2022 – actualidad</div>
       <div>
-        <h3 data-en="Credit Risk &amp; Financial Operations Analyst">Analista de riesgos y operaciones financieras</h3>
+        <h3>Credit Risk &amp; Financial Operations Analyst</h3>
         <p class="strong small">Mercedes-Benz Financial Services · Madrid</p>
-        <p data-en="I assess between 250 and 500 financing operations a month for individuals, freelancers and SMEs. I analyse financial statements, join risk committees and work with sales teams on complex deals. This is where I started building AI tools.">Evalúo entre 250 y 500 operaciones de financiación al mes de particulares, autónomos y pymes. Analizo estados financieros, participo en comités de riesgo y trabajo con los equipos comerciales en operaciones complejas. Aquí empecé a construir herramientas con IA.</p>
+        <ul class="bul"><li data-en="I designed and built an internal AI tool that generates unpaid-debt annex contracts and verifies powers of representation by analysing notarial deeds. It cuts the time per operation by more than 85%, from several minutes to 15–30 seconds.">Diseño y desarrollo de una herramienta interna de IA que genera contratos de anexos de impagados y verifica el poder de representación analizando escrituras notariales. Reduce el tiempo por operación en más de un 85 %, de varios minutos a 15–30 segundos.</li><li data-en="I assess 250 to 500 financing operations a month, from €30,000 to €500,000, for individuals, freelancers and SMEs.">Evalúo entre 250 y 500 operaciones de financiación al mes, de 30.000 a 500.000 €, para particulares, autónomos y pymes.</li><li data-en="I take part weekly in risk and control committees and in monthly results reviews, preparing executive reports.">Participo cada semana en comités de riesgo y control, y en las revisiones mensuales de resultados con informes ejecutivos.</li><li data-en="I analyse financial statements (balance sheets, P&amp;L, CIRBE, solvency and liquidity ratios) and work with sales teams to close complex deals, balancing risk and business.">Analizo estados financieros (balances, PyG, CIRBE, ratios de solvencia y liquidez) y colaboro con los equipos comerciales para cerrar operaciones complejas, equilibrando riesgo y negocio.</li></ul>
       </div>
     </div>
     <div class="row">
       <div class="meta" data-en="Jan – Jul 2022">Ene – Jul 2022</div>
       <div>
-        <h3 data-en="Investment &amp; Portfolio Support Analyst">Analista de apoyo a inversiones y carteras</h3>
+        <h3>Investment &amp; Portfolio Support Analyst</h3>
         <p class="strong small">Altarius Capital · Madrid</p>
-        <p data-en="Daily monitoring of portfolios of 5 to 17 million euros for three high-net-worth clients, with daily and weekly reports.">Seguimiento diario de carteras de 5 a 17 millones de euros de tres clientes de alto patrimonio, con informes diarios y semanales.</p>
+        <ul class="bul"><li data-en="Daily monitoring of portfolios of €5–17 million for three high-net-worth clients, using Interactive Brokers and Bloomberg.">Seguimiento diario de carteras de 5 a 17 millones de euros de tres clientes de alto patrimonio, con Interactive Brokers y Bloomberg.</li><li data-en="Performance control against risk limits and benchmarks, with daily reports and a weekly strategy and market summary.">Control del rendimiento frente a límites de riesgo y benchmarks, con informes diarios y una síntesis semanal de estrategia y mercado.</li><li data-en="Direct communication with clients about the status and execution of their portfolios.">Comunicación directa con los clientes sobre el estado y la ejecución de sus carteras.</li></ul>
       </div>
     </div>
     <div class="row">
       <div class="meta" data-en="Sep 2020 – Nov 2021">Sep 2020 – Nov 2021</div>
       <div>
-        <h3 data-en="Property Operations Coordinator">Coordinador de operaciones inmobiliarias</h3>
-        <p class="strong small">Kompass · Madrid</p>
-        <p data-en="Document control for 20–30 clients a day. I set up a per-client tracking system that improved pickup planning.">Control documental de 20–30 clientes al día. Implanté un seguimiento por cliente que mejoró la planificación de recogidas.</p>
+        <h3>Property Operations Coordinator</h3>
+        <p class="strong small">Plataforma Kompass · Madrid</p>
+        <ul class="bul"><li data-en="Management and document tracking of 20–30 clients a day, coordinating with regional health and waste-control agencies.">Gestión y seguimiento documental de 20–30 clientes al día, coordinando con las agencias de control sanitario y de residuos de las comunidades autónomas.</li><li data-en="I set up per-client waste-volume control that improved container allocation, pickup planning and revenue tracking.">Implanté un control del volumen de residuos por cliente que mejoró la asignación de contenedores, la planificación de recogidas y el seguimiento de ingresos.</li><li data-en="Operational incidents resolved in 10 minutes on average.">Resolución de incidencias operativas en 10 minutos de media.</li></ul>
       </div>
     </div>
     <div class="row">
       <div class="meta" data-en="Feb 2017 – Feb 2018">Feb 2017 – Feb 2018</div>
       <div>
-        <h3 data-en="Real Estate Client Services Assistant">Asistente de atención al cliente inmobiliario</h3>
+        <h3>Real Estate Client Services Assistant</h3>
         <p class="strong small">Triángulo Consulting · Madrid</p>
-        <p data-en="Coordinated 3–4 sale and rental operations a week, with client service and paperwork.">Coordinación de 3–4 operaciones de compraventa y alquiler por semana, con atención al cliente y gestión documental.</p>
+        <ul class="bul"><li data-en="I coordinated 3–4 sale and rental operations a week, with client service and paperwork.">Coordiné 3–4 operaciones de compraventa y alquiler a la semana, con atención al cliente y gestión documental.</li><li data-en="Control and tracking of the agency's full client and property portfolio.">Control y seguimiento de toda la cartera de clientes e inmuebles de la agencia.</li></ul>
       </div>
     </div>
 
@@ -225,8 +217,8 @@ footer a{border:0}
   </section>
 
   <section id="contacto" class="contact">
-    <h2 data-en="Let's talk.">Hablemos.</h2>
-    <p data-en="I'm looking for a role where I can build AI tools and automations that make a company's processes more efficient. Based in Madrid, open to travel.">Busco un puesto en el que construir herramientas y automatizaciones con IA que hagan más eficientes los procesos de una empresa. En Madrid, con disponibilidad para viajar.</p>
+    <h2 data-en="Shall we talk?">¿Hablamos?</h2>
+    <p data-en="I like to learn how teams work and how to make them more efficient. Tell me what you need, I'd be delighted to help.">Me gusta conocer cómo trabajan los equipos y cómo hacerlos más eficientes. Cuéntame qué necesitas, estaré encantado de ayudarte.</p>
     <p><a class="mail" href="mailto:asanjuancere@gmail.com">asanjuancere@gmail.com</a></p>
     <div class="cta">
       <a class="soft" href="https://www.linkedin.com/in/sanjuancereceda">LinkedIn</a>
@@ -244,8 +236,8 @@ footer a{border:0}
 (function(){
   var KEY='lang', TITLE={es:'Álvaro San Juan',en:'Álvaro San Juan'};
   var DESC={
-    es:'Analista financiero que construye herramientas con IA para que los equipos pierdan menos tiempo en tareas repetitivas.',
-    en:'Financial analyst who builds AI tools so teams spend less time on repetitive tasks.'
+    es:'Analista de crédito que construye su camino hacia la IA: herramientas y automatizaciones para hacer mejor el trabajo de los equipos.',
+    en:'Credit analyst building a path into AI: tools and automations that help teams do their work better.'
   };
   var nodes=[].slice.call(document.querySelectorAll('[data-en]'));
   nodes.forEach(function(n){n.setAttribute('data-es',n.innerHTML)});
