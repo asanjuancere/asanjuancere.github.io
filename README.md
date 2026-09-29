@@ -1,23 +1,20 @@
-# Portfolio · IA y automatización para empresas
+# Álvaro San Juan · Portfolio
 
-Herramientas con IA y automatizaciones que ahorran tiempo en departamentos de empresa y en pymes.
+Analista de operaciones financieras que automatiza lo que otros hacen a mano. Herramientas y automatizaciones con IA para ahorrar tiempo en departamentos de empresa.
 
-🌐 **Web del portfolio:** https://asanjuancere.github.io
+🌐 **Web:** https://asanjuancere.github.io · 💼 [LinkedIn](https://www.linkedin.com/in/sanjuancereceda) · ✉️ asanjuancere@gmail.com
 
-| Proyecto | Qué resuelve | Tecnología | Estado |
-|---|---|---|---|
-| [Extractor de Facturas IA](herramientas/extractor-facturas/) | Pasa facturas PDF/foto a Excel con validación de NIF/CIF e importes | HTML, JS, API de Claude | ✅ [Demo en vivo](https://asanjuancere.github.io/herramientas/extractor-facturas/) |
-| Radar de empleo con IA | Recoge ofertas, las puntúa con IA y envía un resumen diario | n8n, API de Claude | 🛠 En desarrollo |
-| Clasificador de correos de clientes | Clasifica correos por urgencia y prepara borradores de respuesta | n8n, API de Claude | 🛠 En desarrollo |
+## Proyectos
 
-## Estructura
+| Proyecto | Qué resuelve | Estado |
+|---|---|---|
+| [Radar de empleo con IA](https://github.com/asanjuancere/radar-empleo) | Puntúa ofertas con IA según mi criterio, mide su acierto (evals) y publica qué habilidades piden | En puesta en marcha |
+| [Extractor de facturas](herramientas/extractor-facturas/) | Facturas PDF/foto a Excel con validación de NIF/CIF e importes | [Demo en vivo](https://asanjuancere.github.io/herramientas/extractor-facturas/) |
+
+## Estructura de este repositorio
 
 ```
-index.html                     → web del portfolio (GitHub Pages)
-herramientas/                  → herramientas con IA (HTML + API de Claude)
-automatizaciones/              → flujos de n8n exportados en JSON
+index.html                       → la web del portfolio
+cv/                              → CV en español e inglés
+herramientas/extractor-facturas/ → demo del extractor de facturas
 ```
-
-## Contacto
-
-[LinkedIn](https://www.linkedin.com/in/sanjuancereceda) · asanjuancere@gmail.com
