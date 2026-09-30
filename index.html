@@ -67,6 +67,14 @@ h3{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.2;lette
 .progress li.ok{color:var(--ink)}
 .progress li.ok::before{background:var(--accent);border-color:var(--accent)}
 
+.flow{list-style:none;margin:14px 0 6px;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:paso}
+.flow li{position:relative;padding-top:32px;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.flow li::before{counter-increment:paso;content:counter(paso);position:absolute;top:0;left:0;width:22px;height:22px;border-radius:50%;background:var(--accent);color:var(--bg);font-size:12px;display:flex;align-items:center;justify-content:center}
+.flow li b{display:block;color:var(--ink);font-weight:500;font-size:15px;margin-bottom:3px}
+@media (max-width:720px){.flow{grid-template-columns:1fr;gap:14px}.flow li{padding:0 0 0 34px}.flow li::before{top:2px}}
+.progress.caps{columns:2;column-gap:32px}
+.progress.caps li{break-inside:avoid}
+@media (max-width:720px){.progress.caps{columns:1}}
 .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 40px}
 @media (max-width:720px){.principles{grid-template-columns:1fr;gap:26px}}
 .principles h3{font-size:21px}
@@ -118,20 +126,42 @@ footer a{border:0}
     <p class="label" data-en="Projects">Proyectos</p>
 
     <article class="row">
-      <div class="meta"><span data-en="In progress">En marcha</span><span class="st" data-en="Not finished yet">Aún sin terminar</span></div>
+      <div class="meta"><span data-en="In use">En uso</span><span class="st" data-en="Improving continuously">En mejora continua</span></div>
       <div>
         <h3 data-en="Job radar with AI">Radar de empleo con IA</h3>
-        <p data-en="Every morning it reviews new job offers, scores them with my own criteria and emails me the ones worth reading. It also records which skills the market asks for.">Cada mañana revisa las ofertas nuevas, las puntúa con mi propio criterio y me envía por correo las que merecen la pena. También registra qué habilidades pide el mercado.</p>
-        <p class="small" data-en="I measure how well the AI matches my judgement using offers I scored by hand, and I watch closely for good offers it would wrongly discard. It also learns from my ratings, checks company career pages and drafts the application message from my real CV.">Mido cuánto coincide la IA con mi criterio con ofertas que puntúo a mano, y vigilo sobre todo las buenas que descartaría por error. Además aprende de mis notas, revisa las páginas de empleo de las empresas y prepara el borrador del mensaje con mi CV real.</p>
-        <ul class="progress">
-          <li class="ok" data-en="AI scoring with rules for the obvious">Puntuación con IA y reglas para lo obvio</li>
-          <li class="ok" data-en="Daily automatic run and tests">Ejecución diaria automática y pruebas</li>
-          <li class="ok" data-en="Real source connected: LinkedIn alerts by email">Fuente real conectada: alertas de LinkedIn por correo</li>
-          <li class="ok" data-en="Evaluation against offers scored by hand">Evaluación con ofertas puntuadas a mano</li>
-          <li data-en="Built, being verified: company career pages, tailored message and CV, application tracking, interview prep">Construido, en verificación: webs de empresas, mensaje y CV a medida, seguimiento de candidaturas, preparación de entrevista</li>
+        <p class="strong" data-en="An assistant that hunts for jobs for me. Every morning it reads the new offers, scores them against my own criteria and my real CV, and emails me only the ones worth reading, with the reasons and the material to apply.">Un asistente que busca trabajo por mí. Cada mañana lee las ofertas nuevas, las puntúa con mi propio criterio y mi CV real, y me envía por correo solo las que merecen la pena, con el porqué y el material para candidatarme.</p>
+        <p class="small" data-en="It is built like a real product: it runs on its own on a schedule, measures its own accuracy, learns from my ratings and warns me when something fails.">Está hecho como un producto real: se ejecuta solo cada día laborable, mide su propio acierto, aprende de mis notas y me avisa si algo falla.</p>
+
+        <p class="label" style="margin:26px 0 4px" data-en="How it works">Cómo funciona</p>
+        <ol class="flow">
+          <li><b data-en="Collects">Recoge</b><span data-en="LinkedIn alerts by email and the career pages of target companies">Alertas de LinkedIn por correo y páginas de empleo de empresas objetivo</span></li>
+          <li><b data-en="Filters">Filtra</b><span data-en="Discards repeats, jobs already applied to and the obvious mismatches, before spending any AI">Descarta repetidas, ya aplicadas y lo obvio, antes de gastar IA</span></li>
+          <li><b data-en="Scores">Puntúa</b><span data-en="Claude compares each offer with my CV, my preferences and offers I rated by hand">Claude compara cada oferta con mi CV, mis preferencias y ofertas que ya he valorado</span></li>
+          <li><b data-en="Investigates">Investiga</b><span data-en="Finds the full offer on the company site and researches the company with cited sources">Busca la oferta completa en la web de la empresa y estudia la empresa citando fuentes</span></li>
+          <li><b data-en="Prepares">Prepara</b><span data-en="Draft message, CV highlights, who to write to and an interview script">Borrador de mensaje, logros del CV a destacar, a quién escribir y guion de entrevista</span></li>
+        </ol>
+
+        <p class="label" style="margin:26px 0 4px" data-en="What it does">Qué hace</p>
+        <ul class="progress caps">
+          <li class="ok" data-en="Scores every offer from 0 to 10 against my CV, with concrete reasons">Puntúa cada oferta de 0 a 10 contra mi CV, con motivos concretos</li>
+          <li class="ok" data-en="Learns from my ratings: they are used as examples in every evaluation">Aprende de mis notas: se usan como ejemplos en cada evaluación</li>
+          <li class="ok" data-en="Measures its own accuracy and watches for good offers it would wrongly discard">Mide su propio acierto y vigila las buenas ofertas que descartaría por error</li>
+          <li class="ok" data-en="Checks the career pages of a list of target companies, in rotating batches">Revisa las páginas de empleo de una lista de empresas objetivo, por lotes rotativos</li>
+          <li class="ok" data-en="Looks up the full offer on the company site and scores it again">Busca la oferta completa en la web de la empresa y la puntúa de nuevo</li>
+          <li class="ok" data-en="Researches each company with web search and cited sources">Estudia cada empresa con búsqueda web y fuentes citadas</li>
+          <li class="ok" data-en="Drafts the message to the recruiter using only facts from my real CV">Redacta el borrador del mensaje al reclutador con hechos de mi CV real</li>
+          <li class="ok" data-en="Suggests which achievements to highlight and who to write to">Sugiere qué logros destacar y a quién escribir</li>
+          <li class="ok" data-en="Tracks my applications and reminds me to follow up">Registra mis candidaturas y me recuerda hacer seguimiento</li>
+          <li class="ok" data-en="Prepares an interview script on demand">Prepara un guion de entrevista a demanda</li>
+          <li class="ok" data-en="Tracks which skills the market asks for and which ones I am missing">Detecta qué habilidades pide el mercado y cuáles me faltan</li>
+          <li class="ok" data-en="Emails me if something fails or the AI account runs out of credit">Me avisa por correo si algo falla o se acaba el saldo de la IA</li>
+          <li class="ok" data-en="Runs by itself every working day, with automatic tests">Se ejecuta sola cada día laborable, con pruebas automáticas</li>
         </ul>
+
+        <p class="small" style="margin-top:16px" data-en="It never sends anything for me and never scrapes LinkedIn or job boards: only email alerts and official company sites. My criteria and data stay private.">Nunca envía nada por mí y no entra en LinkedIn ni en portales de empleo: solo alertas por correo y webs oficiales de empresas. Mi criterio y mis datos son privados.</p>
+        <p class="small" data-en="Status: the core (reading alerts, scoring and email) is verified in real runs; the newest additions are built and in final validation.">Estado: el núcleo (leer alertas, puntuar y enviar el correo) está verificado en ejecuciones reales; las últimas ampliaciones están construidas y en validación final.</p>
         <p class="tags">Python · Claude API · GitHub Actions</p>
-        <div class="links"><a href="https://github.com/asanjuancere/radar-empleo" data-en="Code and decisions">Código y decisiones</a></div>
+        <div class="links"><a href="https://github.com/asanjuancere/radar-empleo" data-en="Code and decisions">Código y decisiones</a><a href="https://github.com/asanjuancere/radar-empleo/blob/main/docs/ARQUITECTURA.md" data-en="How it is built, step by step">Cómo está hecho, paso a paso</a></div>
       </div>
     </article>
 
