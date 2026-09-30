@@ -10,7 +10,7 @@ Analista financiero que construye herramientas con IA para que los equipos dediq
 
 | Proyecto | Qué hace | Estado |
 |---|---|---|
-| [Radar de empleo con IA](https://github.com/asanjuancere/radar-empleo) | Puntúa ofertas con IA según mi criterio, mide su acierto y registra qué habilidades pide el mercado | En marcha |
+| [Radar de empleo con IA](https://github.com/asanjuancere/radar-empleo) | Asistente que busca trabajo por mí: lee las ofertas cada mañana, las puntúa con IA contra mi CV y mi criterio, aprende de mis notas, revisa las webs de las empresas y prepara el mensaje, el CV a medida y la entrevista. Mide su propio acierto y me avisa si algo falla | En uso y en mejora continua |
 | [Extractor de facturas](herramientas/extractor-facturas/) | Facturas PDF o foto a hoja de cálculo, con validación de NIF/CIF e importes | [Demo](https://asanjuancere.github.io/herramientas/extractor-facturas/) |
 
 ## Contenido de este repositorio
