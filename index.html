@@ -67,6 +67,13 @@ h3{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.2;lette
 .progress li.ok{color:var(--ink)}
 .progress li.ok::before{background:var(--accent);border-color:var(--accent)}
 
+details.more{margin:20px 0 8px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:44em}
+details.more summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:13px 0;font-size:15px;color:var(--ink)}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary::after{content:"+";font-size:22px;line-height:1;color:var(--muted);font-weight:300}
+details.more[open] summary::after{content:"\2013"}
+details.more summary:hover span{border-bottom:1px solid var(--ink)}
+details.more .inner{padding:2px 0 18px}
 .flow{list-style:none;margin:14px 0 6px;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:paso}
 .flow li{position:relative;padding-top:32px;font-size:13.5px;line-height:1.45;color:var(--muted)}
 .flow li::before{counter-increment:paso;content:counter(paso);position:absolute;top:0;left:0;width:22px;height:22px;border-radius:50%;background:var(--accent);color:var(--bg);font-size:12px;display:flex;align-items:center;justify-content:center}
@@ -132,7 +139,10 @@ footer a{border:0}
         <p class="strong" data-en="An assistant that hunts for jobs for me. Every morning it reads the new offers, scores them against my own criteria and my real CV, and emails me only the ones worth reading, with the reasons and the material to apply.">Un asistente que busca trabajo por mí. Cada mañana lee las ofertas nuevas, las puntúa con mi propio criterio y mi CV real, y me envía por correo solo las que merecen la pena, con el porqué y el material para candidatarme.</p>
         <p class="small" data-en="It is built like a real product: it runs on its own on a schedule, measures its own accuracy, learns from my ratings and warns me when something fails.">Está hecho como un producto real: se ejecuta solo cada día laborable, mide su propio acierto, aprende de mis notas y me avisa si algo falla.</p>
 
-        <p class="label" style="margin:26px 0 4px" data-en="How it works">Cómo funciona</p>
+        <details class="more">
+          <summary><span data-en="How it works and what it does">Cómo funciona y qué hace</span></summary>
+          <div class="inner">
+        <p class="label" style="margin:10px 0 4px" data-en="How it works">Cómo funciona</p>
         <ol class="flow">
           <li><b data-en="Collects">Recoge</b><span data-en="LinkedIn alerts by email and the career pages of target companies">Alertas de LinkedIn por correo y páginas de empleo de empresas objetivo</span></li>
           <li><b data-en="Filters">Filtra</b><span data-en="Discards repeats, jobs already applied to and the obvious mismatches, before spending any AI">Descarta repetidas, ya aplicadas y lo obvio, antes de gastar IA</span></li>
@@ -160,6 +170,8 @@ footer a{border:0}
 
         <p class="small" style="margin-top:16px" data-en="It never sends anything for me and never scrapes LinkedIn or job boards: only email alerts and official company sites. My criteria and data stay private.">Nunca envía nada por mí y no entra en LinkedIn ni en portales de empleo: solo alertas por correo y webs oficiales de empresas. Mi criterio y mis datos son privados.</p>
         <p class="small" data-en="Status: the core (reading alerts, scoring and email) is verified in real runs; the newest additions are built and in final validation.">Estado: el núcleo (leer alertas, puntuar y enviar el correo) está verificado en ejecuciones reales; las últimas ampliaciones están construidas y en validación final.</p>
+        </div>
+        </details>
         <p class="tags">Python · Claude API · GitHub Actions</p>
         <div class="links"><a href="https://github.com/asanjuancere/radar-empleo" data-en="Code and decisions">Código y decisiones</a><a href="https://github.com/asanjuancere/radar-empleo/blob/main/docs/ARQUITECTURA.md" data-en="How it is built, step by step">Cómo está hecho, paso a paso</a></div>
       </div>
@@ -170,7 +182,17 @@ footer a{border:0}
       <div>
         <h3 data-en="Unpaid-debt annex generator">Generador de anexos de impagados</h3>
         <p data-en="An internal tool at my current company. It generates the contract annexes and checks powers of attorney by reading notarial deeds. What used to take several minutes now takes 15 to 30 seconds.">Herramienta interna en mi empresa actual. Genera los anexos del contrato y comprueba los poderes leyendo escrituras notariales. Lo que llevaba varios minutos ahora lleva entre 15 y 30 segundos.</p>
-        <p class="small" data-en="I can't show the code or the data, but I'm happy to explain how I designed it.">No puedo enseñar código ni datos, pero sí explicar cómo lo diseñé.</p>
+        <details class="more">
+          <summary><span data-en="What it does">Qué hace</span></summary>
+          <div class="inner">
+            <ul class="progress caps" style="columns:1">
+              <li class="ok" data-en="Generates the contract annexes automatically">Genera los anexos del contrato de forma automática</li>
+              <li class="ok" data-en="Checks powers of attorney by reading notarial deeds">Comprueba los poderes leyendo escrituras notariales</li>
+              <li class="ok" data-en="Cuts the work from several minutes to 15–30 seconds">Reduce el trabajo de varios minutos a entre 15 y 30 segundos</li>
+            </ul>
+            <p class="small" data-en="I can't show the code or the data, but I'm happy to explain how I designed it.">No puedo enseñar código ni datos, pero sí explicar cómo lo diseñé.</p>
+          </div>
+        </details>
       </div>
     </article>
   </section>
